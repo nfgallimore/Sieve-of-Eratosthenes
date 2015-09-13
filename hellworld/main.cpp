@@ -10,9 +10,9 @@ int main()
     uInt my_prime = 2; //set to first prime
     std::list<uInt> primes;
     
-    // would set this to 100 but using the Sieve of Eratosthenes and due to this the when it is set to 100 it finds the primes up to 500, since the sieve uses multiplication, this is the fastest algorithim i could find and runs in O(n log log n)
+    // the Sieve of Eratosthenes is a fast algorithim that runs in O(n log log n)
     
-    for(uInt i = 3; count < 100000000; i += 2) { //skip ALL even numbers, find the first 100 million primes
+    for(uInt i = 3; count < 100; i += 2) { //skip ALL even numbers
         
         is_prime = true;
         
@@ -25,7 +25,7 @@ int main()
             if (my_prime < 100) {
                 std::cout << my_prime << "\n";
             }
-            // keep a list of all the primes
+            // keep a list of all the primes (why do all that work for nothing?)
             primes.push_back(my_prime);
         }
     }
